@@ -50,7 +50,7 @@ module.exports = function(currentUser, matchingUsers, params, token) {
         audience: params.audience,
         link_account_token: params.child_token,
         prevent_sign_up: true,
-        connection: connections[0]
+        connection: 'Username-Password-Authentication'
       });
     });
 
@@ -72,7 +72,7 @@ module.exports = function(currentUser, matchingUsers, params, token) {
         el('p', {}, [
           text(
             window.Auth0AccountLinkingExtension.locale.pageMismatchError ||
-              'You seem to have reached this page in error. Please try logging in again'
+            'You seem to have reached this page in error. Please try logging in again'
           )
         ])
       ])
