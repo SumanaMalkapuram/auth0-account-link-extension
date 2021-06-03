@@ -30,7 +30,7 @@ module.exports = function(currentUser, matchingUsers, params, token) {
           return key + '=' + encodeURIComponent(qs[key]);
         })
         .join('&');
-
+      console.log("query params", query);
       window.location = domain + 'authorize?' + query;
     };
 
